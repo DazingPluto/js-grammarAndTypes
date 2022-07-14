@@ -193,6 +193,38 @@ console.log(unusualPropertyNames.!);  // syntax error
 console.log(unusalPropertyNames['!']) // BANG
 
 
+/** RegExp Literal **/
+
+var re = /ab+c/;
+
+/** String Literal */
+
+// literals between qutation marks
+
+'foo'
+"bar"
+'1234'
+'line one \ line two'
+"John's Cat"
+
+const formatArg = (arg) => {
+    if (Array.isArray(arg)){
+        return arg.map((part) => `-${part}`).join("\n");
+    }
+    if (arg.toString === Object.prototype.toString){
+
+        return JSON.stringify(arg)
+    }
+    return(arg)
+}
+
+const print = (segments, ...args) => {
+    let message = segments[0];
+}
+
+
+
+
 
 
 
